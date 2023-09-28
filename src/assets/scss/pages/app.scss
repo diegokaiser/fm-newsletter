@@ -1,0 +1,177 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.main {
+  background-color: #36384D;
+  &__content {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+  }
+}
+
+.newsletter {
+  background-color: white;
+  box-shadow: 0px 7px 7px 3px rgba($color: #333, $alpha: 1.0);
+  padding: 0;
+  @include mobile375 {
+    border-radius: 33px;
+    padding: 24px;
+  }
+  &__content {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 24px;
+    @include mobile375 {
+      flex-direction: row;
+    }
+  }
+  &__form {
+    display: flex;
+    flex-direction: column;
+    font-family: $roboto;
+    justify-content: center;
+    padding: 0 24px 24px 24px;
+    max-width: 375px;
+    @include mobile375 {
+      padding: 0 24px;
+    }
+    h1 {
+      color: #232742;
+      font-size: 42px;
+      margin-bottom: 21px;
+      margin-top: 0;
+      @include mobile375 {
+        font-size: 56px;
+      }
+    }
+    p {
+      color: #212030;
+      font-size: 16px;
+      line-height: 24px;
+      margin-top: 0;
+    }
+    ul {
+      list-style: none;
+      margin: 14px 0 28px 0;
+      padding: 0;
+      li {
+        align-items: flex-start;
+        color: #212030;
+        display: flex;
+        font-size: 16px;
+        margin-bottom: 12px;
+        @include mobile375 {
+          align-items: center;
+        }
+        img {
+          margin-right: 16px;
+        }
+      }
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      label {
+        color: #232742;
+        font-size: 14px;
+        font-weight: 700;
+        margin-bottom: 10px;
+      }
+      input {
+        &[type="text"] {
+          border: 1px solid #C8C8C8;
+          border-radius: 8px;
+          box-sizing: border-box;
+          font-size: 16px;
+          height: 56px;
+          margin-bottom: 24px;
+          padding: 0 21px;
+          &::placeholder {
+            color: #C8C8C8;
+          }
+          &:focus-within {
+            outline: none;
+          }
+        }
+      }
+      button {
+        &[type="button"] {
+          background: rgb(35, 39, 66);
+          background: linear-gradient(90deg, rgba(35, 39, 66, 1) 0%, rgba(35, 39, 66, 1) 100%);
+          border: 0;
+          border-radius: 8px;
+          box-sizing: border-box;
+          color: white;
+          cursor: not-allowed;
+          font-size: 16px;
+          font-weight: 700;
+          height: 56px;
+          transition: .35s ease;
+          &.active {
+            background: rgb(255, 83, 121);
+            background: linear-gradient(90deg, rgba(255, 83, 121, 1) 0%, rgba(254, 105, 63, 1) 100%);
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+}
+
+.alert {
+  background-color: white;
+  box-shadow: 0px 7px 7px 3px rgba($color: #333, $alpha: 1.0);
+  @include mobile375 {
+    border-radius: 33px;
+    padding: 24px;
+  }
+  &__content {}
+  &__message {
+    font-family: $roboto;
+    padding: 0 24px 24px 24px;
+    max-width: 375px;
+    @include mobile375 {
+      padding: 24px;
+    }
+    h1 {
+      color: #232742;
+      font-size: 42px;
+      margin-bottom: 21px;
+      @include mobile375 {
+        font-size: 56px;
+      }
+    }
+    p {
+      color: #212030;
+      font-size: 16px;
+      line-height: 24px;
+      margin-bottom: 35px;
+      margin-top: 0;
+    }
+    button {
+      &[type="button"] {
+        background: rgb(35, 39, 66);
+        background: linear-gradient(90deg, rgba(35, 39, 66, 1) 0%, rgba(35, 39, 66, 1) 100%);
+        border: 0;
+        border-radius: 8px;
+        box-sizing: border-box;
+        color: white;
+        cursor: not-allowed;
+        font-size: 16px;
+        font-weight: 700;
+        height: 56px;
+        width: 100%;
+        transition: .35s ease;
+        &:hover {
+          background: rgb(255, 83, 121);
+          background: linear-gradient(90deg, rgba(255, 83, 121, 1) 0%, rgba(254, 105, 63, 1) 100%);
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
